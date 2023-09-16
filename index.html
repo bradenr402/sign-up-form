@@ -11,7 +11,73 @@
   </head>
 
   <body>
-    
+    <div class="container">
+      <div class="left-bar"></div>
+      <div class="background">
+        <div class="logo-box">
+          <img src="img/odin-lined.png" alt="&quot;The Odin Project&quot; logo" class='logo-img'>
+          <p class='logo-text'>ODIN</p>
+        </div>
+
+        <p class="credit">Photo by <a href="https://unsplash.com/@haliewestphoto">Hallie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a></p>
+      </div>
+
+      <div class="main">
+        <div class="paragraphs">
+          <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <span style='font-style: italic;'>now</span> to get started.</p>
+          <p>You <span style='font-style: italic;'>know</span> you want to.</p>
+        </div>
+
+        <form>
+          <div class="form-content">
+            <h1>Let's do this!</h1>
+            <div class="form-row">
+              <div class="first-name">
+                <label for="first-name">FIRST NAME</label>
+                <input type="text" name="first-name" id="first-name" required >
+              </div>
+              <div class="last-name">
+                <label for="last-name">LAST NAME</label>
+                <input type="text" name="last-name" id="last-name" required >
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="email">
+                <label for="email">EMAIL</label>
+                <input type="email" name="email" id="email" required >
+              </div>
+              <div class="phone">
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" name="phone" id="phone" required >
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="get-password">
+                <label for="pwd">PASSWORD</label>
+                <p class="pwd-hint">Must have at least 6 characters</p>
+                <input type="password" name="pwd" id="pwd" required minlength='6'>
+              </div>
+              <div class="confirm-password">
+                <label for="confirm-pwd">CONFIRM PASSWORD</label>
+                <p class="pwd-hint">Must have at least 6 characters</p>
+                <input type="password" name="confirm-pwd" id="confirm-pwd" required minlength='6'>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-row">
+            <button type="submit">Create Account</button>
+          </div>
+          <div class="form-row">
+            <p class='account'>Already have an account? <a href="">Log in</a></p>
+          </div>
+        </form>
+      </div>
+      <div class="right-bar"></div>
+    </div>
+
   </body>
 
 </html>

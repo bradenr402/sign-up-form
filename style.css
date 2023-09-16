@@ -3,12 +3,193 @@ html {
 }
 *, *::before, *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --invalid-color: #d55c5f;
+    --valid-color: #0066ff;
+    --border-color: #d6d9dc;
+    --bg-color: #f6f7f8;
+    --shadow-color: #ccc;
+    --text-color: #333;
+    --green-color: #596d48;
 }
 
 @font-face {
     font-family: 'norse-bold';
-    src: url('norse-bold-webfont.woff2') format('woff2'),
-         url('norse-bold-webfont.woff') format('woff');
+    src: url(fonts/Norse-Bold.otf) format('opentype');
     font-weight: normal;
     font-style: normal;
+}
+
+.container,
+.logo-box {
+    display: flex;
+    position: relative;
+}
+
+.background {
+    position: relative;
+    width: 55%;
+    height: 100vh;
+    background: #000 url(img/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.logo-box {
+    padding: 1rem;
+    margin-top: 12rem;
+    justify-content: center;
+    align-items: center;
+    background: #00000080;
+}
+
+p.logo-text {
+    font-family: 'norse-bold';
+    font-size: 5rem;
+    color: white;
+}
+
+img.logo-img {
+    height: auto;
+    width: 80px;
+
+}
+
+html {
+    background: var(--bg-color);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 4rem;
+}
+
+.paragraphs p {
+    width: 80%;
+    margin: 2rem;
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.form-content {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.form-row {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.form-row input {
+    outline: none;
+    border-radius: 3px;
+    width: 80%;
+    padding: 7px;
+    font-size: 14px;
+    background-color: white;
+
+    border: 1px solid var(--border-color);
+}
+
+.form-row input:not(:focus):invalid {
+    color: var(--invalid-color);
+    border-color: var(--invalid-color);
+    box-shadow: none;
+}
+
+.form-row input:focus {
+    border-color: var(--valid-color);
+    box-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+.form-row > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.form-row label {
+    font-size: 14px;
+    margin: 8px 0 4px 0;
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+}
+
+form {
+    width: 100%;
+}
+
+.form-row button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--green-color);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px var(--shadow-color);
+    padding: 15px 45px;
+    cursor: pointer;
+}
+
+.form-row button,
+.form-row p {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+.form-row a {
+    text-decoration: none;
+    color: var(--green-color);
+}
+
+p.account {
+    color: var(--text-color);
+}
+
+.credit {
+    color: var(--border-color);
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+    font-size: 12px;
+}
+
+.credit a {
+    color: var(--border-color);
+}
+
+.left-bar,
+.right-bar {
+    width: 35%;
+    background-color: #111;
+}
+
+p.pwd-hint {
+    margin: 0 0 4px 0;
+    font-size: 12px;
+    color: var(--text-color);
+    opacity: 0.7;
 }
